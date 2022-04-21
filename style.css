@@ -1,0 +1,148 @@
+:root {
+  /* Primary */
+
+  --soft-blue: hsl(215, 51%, 70%);
+  --cyan: hsl(178, 100%, 50%);
+
+  /*Netural */
+  --main-bg: hsl(217, 54%, 11%);
+  --card-bg: hsl(216, 50%, 16%);
+  --line: hsl(215, 32%, 27%);
+  --white: hsl(0, 0%, 100%);
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 18px;
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 320px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+body {
+  font-family: "Outfit", sans-serif;
+  background-color: var(--main-bg);
+  height: calc(100vh - 1px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.8333rem;
+}
+
+.card {
+  width: 325px;
+  max-width: 100%;
+  background-color: var(--card-bg);
+  padding: 1.111rem;
+  border-radius: 15px;
+}
+
+.card-img {
+  position: relative;
+  cursor: pointer;
+}
+
+.card-img img {
+  max-width: 100%;
+  border-radius: 7px;
+  display: block;
+}
+
+.card-img .overlay {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 255, 247, 0.4);
+  border-radius: 7px;
+  -webkit-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+}
+
+.card-img .overlay svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.card-img:hover .overlay {
+  opacity: 1;
+}
+
+.card a {
+  text-decoration: none;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
+  color: inherit;
+}
+
+.card h2 {
+  color: var(--white);
+  font-weight: 600;
+  font-size: 1.16rem;
+  margin-top: 1.388rem;
+}
+
+.card p {
+  color: var(--soft-blue);
+  font-size: 0.888rem;
+}
+
+.card .price-details {
+  overflow: hidden;
+  padding-bottom: 1.111rem;
+  border-bottom: 1px solid var(--line);
+  font-size: 0.88rem;
+}
+
+.card .price-details svg {
+  margin-right: 0.1666rem;
+}
+
+.card .price-details .price {
+  float: left;
+  color: var(--cyan);
+  font-weight: 600;
+}
+
+.card .price-details .days {
+  float: right;
+  color: var(--soft-blue);
+}
+
+.card .creation {
+  font-size: 0.88rem;
+}
+
+.card .creation a {
+  color: var(--white);
+}
+
+.card .creation img {
+  border: 2px solid var(--white);
+  border-radius: 50%;
+  width: 2.222rem;
+  vertical-align: middle;
+  margin-right: 0.8333rem;
+}
+
+.card a:hover {
+  color: var(--cyan);
+}
